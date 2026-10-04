@@ -1,0 +1,32 @@
+# Python cache and generated files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter temporary files
+.ipynb_checkpoints/
+
+# IDE and editor files
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Python build and package artifacts
+build/
+dist/
+*.egg-info/
+
+# Streamlit local secrets
+.streamlit/secrets.toml
+
+# Datasets (Large CSV files)
+IPL.csv
+data/processed/*.csv
