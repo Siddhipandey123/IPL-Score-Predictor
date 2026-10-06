@@ -20,7 +20,7 @@ def load_predictor():
 
 @st.cache_data
 def load_historical_data():
-    df = pd.read_csv("data/processed/innings_features.csv", low_memory=False)
+    df = pd.read_csv("data/app_history.csv", low_memory=False)
     extra_cols = ['match_id', 'innings', 'final_score', 'venue_highest_score', 'venue_lowest_score']
     cols = ['date', 'batting_team_clean', 'bowling_team_clean', 'venue_clean'] + HISTORICAL_FEATURES + extra_cols
     existing_cols = [c for c in cols if c in df.columns]
