@@ -1,7 +1,9 @@
 # FUTURE XI — Real-Time IPL Score Forecasting & Stadium Analytics
 
+[Live Demo](https://ipl-score-predictor-d5qla8fkbc9ajk9cqrqmtq.streamlit.app/)
+
 ## 1. Project Overview
-FUTURE XI is an end-to-end machine learning system and interactive web application that forecasts the final score of a first-innings IPL batting team based on the current match state. Using historical IPL ball-by-ball data, the model processes real-time match dynamics to provide an accurate estimate of the projected total.
+FUTURE XI is an end-to-end machine learning system and interactive web application that forecasts the final score of a first-innings IPL batting team based on the current match state. Using historical IPL ball-by-ball data, the model forecasts the final innings score from current match-state inputs to provide an accurate estimate of the projected total.
 
 ## 2. Problem Statement
 During a T20 cricket match, predicting the final score is notoriously difficult due to the volatile nature of the format. Traditional run-rate extrapolations often fail because they do not account for critical contextual factors such as pitch history, wickets lost, batting team strength, and bowling team quality. This project aims to solve that by building a data-driven machine learning model that understands historical patterns and current momentum.
@@ -30,7 +32,7 @@ During a T20 cricket match, predicting the final score is notoriously difficult 
 The model was trained on a large IPL ball-by-ball historical dataset covering 12+ years of matches.
 - **Phase 1 & 2:** Initial data understanding, canonicalization of team/venue names, and outlier removal.
 - **Phase 3:** Leakage-safe historical feature engineering.
-- **Phase 4:** Assembly of the model-ready dataset and pipeline construction.
+- **Phase 4:** model training and evaluation using XGBoost, with chronological train/validation/test splitting and evaluation using MAE, RMSE, and MAPE.
 
 ## 7. Feature Engineering
 The model utilizes a blend of match-state and historical features:
@@ -52,7 +54,7 @@ Powerplay vs Baseline:
 - **XGBoost Powerplay MAE:** ~32.0 runs
 - **Baseline Powerplay MAE:** ~59.8 runs
 
-*Note: The XGBoost model demonstrates massive superiority over the baseline during the volatile Powerplay and middle overs.*
+*Note: The XGBoost model outperformed the current-run-rate baseline on the overall test set, while performance varied across different innings phases.*
 
 ## 10. Dashboard
 The interactive Streamlit dashboard is split into three main sections:
