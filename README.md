@@ -162,4 +162,4 @@ This will launch the application in your default web browser.
 
 ## 18. Author
 **Siddhi Kumari**
-*(Update with your contact links, LinkedIn, or portfolio)*
+
